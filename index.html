@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <title>CU Parking Locator</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Type of Parking</h1>
+    </header>
+    <content>
+      <ul class="options">
+        <li id="studentpage"><a href="GMap.html">Student</a></li>
+        <li><a href="#">Employee</a></li>
+        <li><a href="#">Visitor</a></li>
+        <li><a href="#">Handicap</a></li>
+        <li><a href="#">EVERYTHING</a></li>
+      </ul>
+    </content>
+
+  </div>
+
+  <script>
+        window.onload = function()
+        {
+            document.addEventListener("deviceready", init, false);
+        }
+        function init()
+        {
+            var myButton = document.getElementById("studentpage");
+            myButton.addEventListener("click", goToHome, false);
+        }
+
+        function goToHome()
+        {
+          window.location = "GMap.html";
+        }
+  </script>
+</body>
+</html>
